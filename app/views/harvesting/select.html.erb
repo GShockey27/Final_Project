@@ -1,0 +1,11 @@
+<main class="container">
+  <section class="row">
+    <div class="col-6 push-1">
+		<select name="harvest_id">
+		<% @clients.each do |client| %>
+		<option value="<%= client['id'] %>"><%= client['name'] %></option>
+		<% end %>
+		</select>
+    </div>
+  </section>
+</main>
