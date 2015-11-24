@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
+  
   root 'harvesting#select'
-
   resources :users
   resources :harvesting
   get 'signup', to: 'harvesting#select'

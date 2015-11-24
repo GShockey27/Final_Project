@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   end
 
   def create
+    # data comes from harvesting#select
   end
 
   def show

@@ -10,7 +10,7 @@ class HarvestingController < ApplicationController
 	harvest = Harvest.hardy_client(subdomain: subdomain, username: username, password: password)
 	@clients = harvest.clients.all
 	@projects = harvest.projects.all
-	@tasks = harvest.tasks.all 
+	@tasks = harvest.tasks.all
 	@user = User.new
   end
 
