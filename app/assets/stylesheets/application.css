@@ -10,6 +10,23 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+ *= require style.less
  *= require_self
  */
+/**
+ * Grid System
+ *
+ * TheFractionless grid is the Clever grid which is taken from [Sndicate](https://github.com/Sndicate/sndicate)
+ * which itself is lifted from the [Semantic Grid System](http://semantic.gs)
+ */
+header nav ul {
+	list-style: none;
+	float: right;
+}
+
+header nav ul li{
+	display: inline-block;
+	margin-right: 1em;
+}
+
+header nav ul li:last-child {margin-right: 0;}

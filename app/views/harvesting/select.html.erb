@@ -1,25 +1,33 @@
-<h2>Safety Check Harvest Time</h2>
-<br/>
 <main class="container">
-  <section class="row">
-    <div class="col-6 push-1">
-    <h3>Clients</h3>
+	<section class="row">
+		<div class="col-12">
+			<h2 class="centered-text">Safety Check Harvest Time!</h2>
+		</div>
+	</section>
+	<!-- Row of form columns -->
+	<section class="row">
+		<div class="col-4">
+			<h3>Clients</h3>
+			<!-- START FORM!!!!!! -->
+			<%= form_tag select_path, method: 'post' do %>
     		<select name="client">
-				<% @clients.each do |client| %>
-						<option value="<%= client['id'] %>"><%= client['name'] %></option>
+    			<% @activeclients.each do |client| %>
+					<option value="<%= client %>"><%= client %></option>	
 				<% end %>
 			</select>
-    </div>
-    
-    <div class="col-6 push-6">
-    <h3>Tasks</h3>
+		</div>
+
+		<div class="col-3">
+			<h3>Tasks</h3>
     		<select name="task">
-				<% @tasks.each do |task| %>
-						<option value="<%= task['id'] %>"><%= task['name'] %></option>
+				<% @activetasks.each_with_index do |task, i| %>
+						<option value="<%= task %>"><%= task %></option>	
 				<% end %>
 			</select>
-    </div>
-    <h3>Start Date</h3>
+		</div>
+
+		<div class="col-5">
+			<h3>Start Date----------End Date</h3>
     		<select name="start_month">
     			<% ['January', 'February', 'March', 'April', 'May','June','July','August','September','October', 'November', 'December'].each_with_index do |month, i| %>
 					<option value="<%= i + 1 %>"><%= month %></option>	
@@ -31,13 +39,11 @@
 				<% end %>
 			</select>
 			<select name="start_year">
-				<% ['2013', '2014', '2015'].each_with_index do |year, i| %>
-					<option value="<%= i + 1 %>"><%= year %></option>	
+				<% ['2013', '2014', '2015'].each do |year| %>
+					<option value="<%= year %>"><%= year %></option>	
 				<% end %>
 			</select>
-    </div>
-    <h3>End Date</h3>
-    <select name="end_month">
+    		<select name="end_month">
     			<% ['January', 'February', 'March', 'April', 'May','June','July','August','September','October', 'November', 'December'].each_with_index do |month, i| %>
 					<option value="<%= i + 1 %>"><%= month %></option>	
 				<% end %>
@@ -49,10 +55,12 @@
 			</select>
 			<select name="end_year">
 				<% ['2013', '2014', '2015'].each_with_index do |year, i| %>
-					<option value="<%= i + 1 %>"><%= year %></option>	
+					<option value="<%= year %>"><%= year %></option>	
 				<% end %>
 			</select>
-    		
-    </div>
-  </section>
+			<%= submit_tag %>
+    		<% end %>
+    		<!-- END FORM!!!!!! -->
+		</div>
+	</section>
 </main>

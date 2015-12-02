@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users
   resources :harvesting
   get 'signup', to: 'harvesting#select'
+  post 'select', to: 'harvesting#show'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
