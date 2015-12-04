@@ -1,9 +1,4 @@
 <main class="container">
-	<section class="row">
-		<div class="col-12">
-			<h2 class="centered-text">Safety Check Harvest Time!</h2>
-		</div>
-	</section>
 	<!-- Row of form columns -->
 	<section class="row">
 		<div class="col-4">
@@ -27,7 +22,7 @@
 		</div>
 
 		<div class="col-5">
-			<h3>Start Date----------End Date</h3>
+			<h3>Start Date &nbsp;&nbsp;&nbsp; End Date</h3>
     		<select name="start_month">
     			<% ['January', 'February', 'March', 'April', 'May','June','July','August','September','October', 'November', 'December'].each_with_index do |month, i| %>
 					<option value="<%= i + 1 %>"><%= month %></option>	
@@ -58,7 +53,7 @@
 					<option value="<%= year %>"><%= year %></option>	
 				<% end %>
 			</select>
-			<%= submit_tag %>
+			<%= submit_tag "Results" %>
     		<% end %>
     		<!-- END FORM!!!!!! -->
 		</div>

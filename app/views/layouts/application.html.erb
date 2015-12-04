@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FinalProject</title>
+  <title>SCI Harvest Time!</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400,300,700|Source+Code+Pro:400,700' />
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<header class="container">
+  <div class="row-loose">
+    <div class="col-12">
+      <h1 class="centered-text">
+        <%= link_to 'SCI Harvest Time!', root_path %>
+      </h1>
+</header>
 <%= yield %>
 
 </body>
