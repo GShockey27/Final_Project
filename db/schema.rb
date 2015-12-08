@@ -11,26 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151120014043) do
-
-  create_table "entries", force: :cascade do |t|
-    t.integer  "entry_id"
-    t.date     "date"
-    t.decimal  "hours"
-    t.string   "project"
-    t.string   "task"
-    t.string   "consultant"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.integer  "user_id"
-    t.string   "email"
-    t.string   "password_digest"
-    t.string   "client"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end
