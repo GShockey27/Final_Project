@@ -4,7 +4,7 @@ class HarvestingController < ApplicationController
   end
 
   def select #Harvest API data and selecting params
-  	@user = User.new
+  	# @user = User.new
   subdomain = 'safetycheckinc'
 	username = 'gscannell@safetycheckinc.com'
 	password = 'safetycheck'
